@@ -1,0 +1,66 @@
+<div class="container mx-auto md:grid md:grid-cols-2 mt-12 gap-10 p-5 items-center">
+    <h1 class="text-indigo-600 text-6xl font-bold">Crear tu Actor</h1>
+    <form
+    (submit)="crearActor()"
+    [formGroup]="actorForm"
+    class='bg-white py-10 px-5 mb-10 lg:mb-0 shadow-md rounded-md'
+    >
+      <div class='mb-5'>
+        <label 
+          htmlFor='nombre'
+          class='text-gray-700 uppercase font-bold'
+        >
+          Nombre
+        </label>
+        <input 
+          type="text"
+          id='nombre'
+          name="nombre"
+          placeholder='Nombre Actor'
+          formControlName="nombre"
+          class='border-2 w-full p-2 mt-2 placeholder-gray-400 rounded-md'
+        />
+      </div>
+    
+      <div class='mb-5'>
+        <label 
+          htmlFor='apellido'
+          class='text-gray-700 uppercase font-bold'
+        >
+          Apellido
+        </label>
+        <input 
+          type="text"
+          id='apellido'
+          name="apellido"
+          placeholder='Apellido'
+          formControlName="apellido"
+          class='border-2 w-full p-2 mt-2 placeholder-gray-400 rounded-md'
+    
+        />
+      </div>
+    
+      <div class='mb-5'>
+        <label 
+          htmlFor='edad'
+          class='text-gray-700 uppercase font-bold'
+        >
+          Edad
+        </label>
+        <input 
+          type="text"
+          id='edad'
+          name="edad"
+          placeholder='edad'
+          formControlName="edad"
+          class='border-2 w-full p-2 mt-2 placeholder-gray-400 rounded-md'
+        />
+      </div>
+    
+      <input 
+        type="submit" 
+        class='bg-indigo-600 w-full p-3 text-white uppercase font-bold hover:bg-indigo-800 cursor-pointer transition-colors'
+      />
+    </form>
+</div>
+

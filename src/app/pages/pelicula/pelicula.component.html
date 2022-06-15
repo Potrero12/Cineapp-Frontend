@@ -1,0 +1,27 @@
+<div class="container mx-auto md:grid md:grid-cols-2 mt-12 gap-10 p-5 items-center">
+    <h1 class="text-indigo-600 text-6xl font-bold">Detalle de Pelicula</h1>
+
+    <table class="w-full text-sm text-left text-black-500 dark:text-gray-400">
+      <thead class="text-xs text-indigo-700 uppercase dark:bg-gray-700 dark:text-gray-400">
+          <tr>
+              <th scope="col" class="px-6 py-3">Nombre</th>
+              <th scope="col" class="px-6 py-3">Genero</th>
+              <th scope="col" class="px-6 py-3">Duracion</th>
+              <th scope="col" class="px-6 py-3">Actor</th>
+              <th scope="col" class="px-6 py-3">Director</th>
+          </tr>
+      </thead>
+      <tbody>
+          <tr 
+              class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+              <td scope="row" class="px-6 py-4 font-medium text-gray-900 dark:text-white whitespace-nowrap">{{Peliculas.nombre}}</td>
+              <td class="px-6 py-4">{{Peliculas.genero}}</td>
+              <td class="px-6 py-4">{{Peliculas.duracion}}</td>
+              <td class="px-6 py-4">{{Peliculas.actor.nombre + '  '+ Peliculas.actor.apellido}}</td>
+              <td class="px-6 py-4">{{Peliculas.director.nombre + '  '+ Peliculas.director.apellido}}</td>
+          </tr>
+      </tbody>
+  </table>
+
+</div>
+

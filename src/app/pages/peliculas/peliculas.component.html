@@ -1,0 +1,32 @@
+<div class="container mx-auto text-center p-auto pt-96">
+
+    <h1 class="text-indigo-600 font-bold text-xl">Peliculas</h1>
+
+    <table class="w-full text-sm text-left text-black-500 dark:text-gray-400">
+        <thead class="text-xs text-indigo-700 uppercase dark:bg-gray-700 dark:text-gray-400">
+            <tr>
+                <th scope="col" class="px-6 py-3">Nombre</th>
+                <th scope="col" class="px-6 py-3">Genero</th>
+                <th scope="col" class="px-6 py-3">Duracion</th>
+                <th scope="col" class="px-6 py-3">Actor</th>
+                <th scope="col" class="px-6 py-3">Director</th>
+                <th scope="col" class="px-6 py-3">Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr 
+                class="bg-white border-b dark:bg-gray-800 dark:border-gray-700"
+                *ngFor="let pelicula of peliculas">
+                <td scope="row" class="px-6 py-4 font-medium text-gray-900 dark:text-white whitespace-nowrap">{{pelicula.nombre}}</td>
+                <td class="px-6 py-4">{{pelicula.genero}}</td>
+                <td class="px-6 py-4">{{pelicula.duracion}}</td>
+                <td class="px-6 py-4">{{pelicula.actor.nombre + '  '+ pelicula.actor.apellido}}</td>
+                <td class="px-6 py-4">{{pelicula.director.nombre + '  '+ pelicula.director.apellido}}</td>
+                <td class="px-6 py-4">
+                    <a [routerLink]="['/pelicula/', pelicula._id]" data-toggle="tooltip" data-original-title="Ver">Ver Detalle<i class="fa fa-eye text-inverse m-r-10"></i> </a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+</div>
