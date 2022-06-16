@@ -5,7 +5,7 @@ export class Director {
         public nombre:string,
         public apellido: string,
         public edad: number,
-        public id?:string
+        public _id?:string
     ){}
 
 }

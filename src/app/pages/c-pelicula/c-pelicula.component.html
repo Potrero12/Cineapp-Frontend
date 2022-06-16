@@ -1,0 +1,98 @@
+<div class="container mx-auto md:grid md:grid-cols-2 mt-12 gap-10 p-5 items-center">
+    <h1 class="text-indigo-600 text-6xl font-bold">Crear tu Pelicula</h1>
+    <form
+    (submit)="crearPelicula()"
+    [formGroup]="peliculaForm"
+    class='bg-white py-10 px-5 mb-10 lg:mb-0 shadow-md rounded-md'
+    >
+
+      <div class='mb-5'>
+        <label 
+          htmlFor='nombre'
+          class='text-gray-700 uppercase font-bold'
+        >
+          Nombre
+        </label>
+        <input 
+          type="text"
+          id='nombre'
+          name="nombre"
+          placeholder='Nombre Pelicula'
+          formControlName="nombre"
+          class='border-2 w-full p-2 mt-2 placeholder-gray-400 rounded-md'
+        />
+      </div>
+    
+      <div class='mb-5'>
+        <label 
+          htmlFor='genero'
+          class='text-gray-700 uppercase font-bold'
+        >
+          Genero
+        </label>
+        <input 
+          type="text"
+          id='genero'
+          name="genero"
+          placeholder='Genero Pelicula'
+          formControlName="genero"
+          class='border-2 w-full p-2 mt-2 placeholder-gray-400 rounded-md'
+    
+        />
+      </div>
+    
+      <div class='mb-5'>
+        <label 
+          htmlFor='duracion'
+          class='text-gray-700 uppercase font-bold'
+        >
+          Duracion
+        </label>
+        <input 
+          type="text"
+          id='duracion'
+          name="duracion"
+          placeholder='Duracion'
+          formControlName="duracion"
+          class='border-2 w-full p-2 mt-2 placeholder-gray-400 rounded-md'
+        />
+      </div>
+      
+      <div class="mb-5">
+        <label class="text-gray-700 uppercase font-bold">Elige un actor</label>
+        <select 
+            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+            formControlName="actor"
+        >
+          <option value="">Seleccione Actor</option>
+          <option
+            *ngFor="let actor of actores"
+            [value]="actor._id"
+           >
+            {{actor.nombre}} {{actor.apellido}}
+          </option>
+        </select>
+      </div>
+
+      <div class="mb-5">
+        <label class="text-gray-700 uppercase font-bold">Elige un director</label>
+        <select 
+            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+            formControlName="director"
+        >
+        <option value="">Seleccione Director</option>
+        <option
+        *ngFor="let director of directores" 
+        [value]="director._id"
+        >
+          {{director.nombre}} {{director.apellido}}
+        </option>
+        </select>
+      </div>
+    
+      <input 
+        type="submit" 
+        class='bg-indigo-600 w-full p-3 text-white uppercase font-bold hover:bg-indigo-800 cursor-pointer transition-colors'
+      />
+    </form>
+</div>

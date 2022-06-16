@@ -33,5 +33,9 @@ export class PeliculaService {
     )
   }
 
+  crearPelicula(pelicula:Pelicula){
+    return this.http.post(`${baseUrl}/pelicula/crear-pelicula`, pelicula)
+  }
+
 
 }

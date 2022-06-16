@@ -10,6 +10,7 @@ import { DirectorComponent } from './director/director.component';
 import { MainComponent } from './main/main.component';
 import { PeliculaComponent } from './pelicula/pelicula.component';
 import { PeliculasComponent } from './peliculas/peliculas.component';
+import { CPeliculaComponent } from './c-pelicula/c-pelicula.component';
 
 
 
@@ -19,14 +20,16 @@ import { PeliculasComponent } from './peliculas/peliculas.component';
     DirectorComponent,
     MainComponent,
     PeliculaComponent,
-    PeliculasComponent
+    PeliculasComponent,
+    CPeliculaComponent
   ],
   exports: [
     ActorComponent,
     DirectorComponent,
     MainComponent,
     PeliculaComponent,
-    PeliculasComponent
+    PeliculasComponent,
+    CPeliculaComponent
   ],
   imports: [
     CommonModule,
